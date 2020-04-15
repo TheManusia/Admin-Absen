@@ -1,11 +1,10 @@
 <?php 
 
-class Home extends CI_Controller {
+class Account extends CI_Controller {
     public function index() {
-
-        $data['judul'] = "Dashboard";
+        $data['judul'] = "Account";
         $this->load->view('inc/header', $data);
-        $this->load->view('home/index');
+        $this->load->view('user/account');
         $this->load->view('inc/footer');
     }
 }
