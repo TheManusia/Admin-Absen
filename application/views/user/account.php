@@ -1,7 +1,7 @@
 <h1 class="mt-4">Account</h1>
 <br />
 
-<form action="<?= base_url() ?>user">
+<form action="<?= base_url() ?>user" method="post">
     <div class="form-group row">
         <label for="nama" class="col-sm-2 col-form-label">Nama</label>
         <div class="col-sm-10">
@@ -29,7 +29,7 @@
     <div class="modal-dialog" role="document">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                <h5 class="modal-title" id="exampleModalLabel">Warning</h5>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                 </button>
@@ -39,7 +39,7 @@
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                <a href="<?= base_url() ?>account" class="btn btn-danger">Reset</a>
+                <a href="<?= base_url() ?>user/account" class="btn btn-danger">Reset</a>
             </div>
         </div>
     </div>

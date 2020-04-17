@@ -1,7 +1,7 @@
 <h1 class="mt-4">Edit Profile</h1>
 <br />
 
-<form action="<?= base_url() ?>setting">
+<form action="<?= base_url() ?>setting" method="post">
     <div class="form-group row">
         <label for="nama" class="col-sm-2 col-form-label">Username</label>
         <div class="col-sm-10">

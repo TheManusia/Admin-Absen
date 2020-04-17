@@ -10,6 +10,8 @@
     <title>Login - Control Panel</title>
     <link href="css/styles.css" rel="stylesheet" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/js/all.min.js" crossorigin="anonymous"></script>
+    <!-- This icon from https://www.flaticon.com/authors/flat-icons -->
+    <link rel="icon" href="<?= base_url() ?>img/login.png">
 </head>
 
 <body class="bg-primary">
@@ -30,8 +32,8 @@
                                         <div class="form-group">
                                             <div class="custom-control custom-checkbox"><input class="custom-control-input" id="ingat" type="checkbox" /><label class="custom-control-label" for="ingat">Ingat password</label></div>
                                         </div>
-                                        <div class="form-group d-flex align-items-center justify-content-end mt-4 mb-0">
-                                        <a class="btn btn-primary" href="<?= base_url() ?>">Login</a></div>
+                                        <div class="form-group d-flex align-items-center justify-content-end mt-2 mb-0">
+                                            <a class="btn btn-primary" href="<?= base_url() ?>">Login</a></div>
                                     </form>
                                 </div>
                                 <div class="card-footer text-center">

@@ -1,7 +1,7 @@
 <h1 class="mt-4">Edit Kehadiran</h1>
 <br />
 
-<form action="<?= base_url() ?>user">
+<form action="<?= base_url() ?>user" method="post">
     <div class="form-group row">
     <label for="nama" class="col-sm-2 col-form-label">Nama</label>
         <div class="col-sm-10">
