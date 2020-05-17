@@ -19,6 +19,8 @@
 <script type="text/javascript">
     $(document).ready(function() {
         $('#table_id').DataTable();
+        $('#table_id2').DataTable();
+        $('#table_id3').DataTable();
     });
 </script>
 </body>
