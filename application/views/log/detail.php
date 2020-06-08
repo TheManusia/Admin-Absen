@@ -1,4 +1,4 @@
-<h1 class="mt-4">Tanggal</h1>
+<h1 class="mt-4">Tanggal <?= $tanggal ?></h1>
 <br />
 
 <table id="table_id" class="table table-striped table-bordered" cellspacing="0" width="100%">

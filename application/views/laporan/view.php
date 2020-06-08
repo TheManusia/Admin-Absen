@@ -1,4 +1,4 @@
-<h1 class="mt-4">Laporan</h1>
+<h1 class="mt-4">Laporan Tanggal <?= $tanggal ?> </h1>
 <br />
 <div class="accordion">
 

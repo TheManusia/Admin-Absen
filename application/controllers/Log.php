@@ -20,6 +20,7 @@ class Log extends CI_Controller {
     public function view($tanggal) {
         $data['judul'] = "Log";
         $data['log'] = $this->Log_model->getAllLog($tanggal);
+        $data['tanggal'] = $tanggal;
 
         $this->load->view('inc/header', $data);
         $this->load->view('log/detail', $data);

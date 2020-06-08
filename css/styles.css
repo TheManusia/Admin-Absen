@@ -6066,7 +6066,9 @@ a.close.disabled {
 }
 
 .bg-primary {
-  background-color: #007bff !important;
+  background-image: linear-gradient(rgba(75, 96, 104, 0.226),
+   rgba(75, 96, 104, 0.226)),
+  url(../img/slider-1-1920x1080.jpg) !important;
 }
 
 a.bg-primary:hover, a.bg-primary:focus,

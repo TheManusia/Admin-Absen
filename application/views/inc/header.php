@@ -58,10 +58,6 @@
                             Admin
                         </a>
 
-                        <a class="nav-link" href="<?= base_url() ?>register">
-                            <div class="sb-nav-link-icon"><i class="fas fa-user-plus"></i></div>
-                            Register
-                        </a>
                         <a class="nav-link" href="<?= base_url() ?>log">
                             <div class="sb-nav-link-icon"><i class="fas fa-align-left"></i></div>
                             Kehadiran Siswa

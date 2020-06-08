@@ -27,4 +27,24 @@ class Admin_model extends CI_Model {
         $this->db->update('admin', $data);
         $this->session->set_flashdata('flash', 'diubah');
     }
+
+    public function register()
+    {
+        $nama = $this->input->post('nama', true);
+        $username = $this->input->post('username', true);
+        $check = $this->db->select('username')->get_where('admin', ['username' => $username])->num_rows();
+
+        if ($check == 0) {
+            $user = [
+                'nama' => $nama,
+                'username' => $username,
+                'password' => md5('password123')
+            ];
+
+            $this->db->insert('admin', $user);
+            $this->session->set_flashdata('flash', 'ditambahkan');
+        } else {
+            $this->session->set_flashdata('gagal', 'Username ' . $username . ' sudah terpakai');
+        }
+    }
 }

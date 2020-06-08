@@ -3,7 +3,8 @@
 class User extends CI_Controller
 {
 
-    public function __construct() {
+    public function __construct()
+    {
         parent::__construct();
         $this->load->model('User_model');
         $this->load->library('form_validation');
@@ -12,15 +13,26 @@ class User extends CI_Controller
         }
     }
 
-    public function index(){
+    public function index()
+    {
         $data['judul'] = "User";
         $data['data'] = $this->User_model->getAllData();
-        $this->load->view('inc/header', $data);
-        $this->load->view('user/index');
-        $this->load->view('inc/footer');
+
+        $this->form_validation->set_rules('nama', 'Nama', 'required|alpha');
+        $this->form_validation->set_rules('username', 'Username', 'required|alpha_numeric');
+
+        if ($this->form_validation->run() == FALSE) {
+            $this->load->view('inc/header', $data);
+            $this->load->view('user/index');
+            $this->load->view('inc/footer');
+        } else {
+            $this->User_model->register();
+            redirect('user');
+        }
     }
 
-    public function edit($id) {
+    public function edit($id)
+    {
         $data['judul'] = "Edit";
         $data['absen'] = $this->User_model->getAbsenById($id);
         $data['user'] = $this->User_model->getUserById($id);
@@ -34,12 +46,13 @@ class User extends CI_Controller
             $this->load->view('inc/footer');
         } else {
             $this->User_model->updateAbsen();
-            
+
             redirect('User');
         }
     }
 
-    public function account($id) {
+    public function account($id)
+    {
         $data['judul'] = "Account";
 
         $this->form_validation->set_rules('nama', 'Nama', 'required');
@@ -51,14 +64,15 @@ class User extends CI_Controller
             $this->load->view('inc/footer');
         } else {
             $this->User_model->updateUser();
-            
+
             redirect('user');
         }
     }
 
-    public function resetPass($id) {
+    public function resetPass($id)
+    {
         $this->User_model->resetPass($id);
-        
-        redirect('user/account/'.$id);
+
+        redirect('user/account/' . $id);
     }
 }

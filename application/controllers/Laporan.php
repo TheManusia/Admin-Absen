@@ -23,6 +23,7 @@ class Laporan extends CI_Controller {
         $data['hadir'] = $this->Laporan_model->getHadir($tanggal);
         $data['alpa'] = $this->Laporan_model->getAlpa($tanggal);
         $data['izin'] = $this->Laporan_model->getIzin($tanggal);
+        $data['tanggal'] = $tanggal;
         $this->load->view('inc/header', $data);
         $this->load->view('laporan/view', $data);
         $this->load->view('inc/footer');

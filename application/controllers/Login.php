@@ -18,6 +18,8 @@ class Login extends CI_Controller {
             } else {
                 $this->Login_model->login();
             }
+        } else {
+            redirect(base_url());
         }
     }
 
